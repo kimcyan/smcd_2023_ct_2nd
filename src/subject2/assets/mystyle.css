@@ -1,6 +1,6 @@
 .mywrapper {
   padding: 0;
-  background-color: #35353D
+  background-color: #35353d;
 }
 /* 1 표지 자침 */
 #section1 {
@@ -61,10 +61,24 @@
 .m-135 {
   transform: rotate(135deg);
 }
+/*이미지 호버*/
+#hover-img-wrap {
+  position: relative;
+}
+#hover-img {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+#hover-img:hover {
+  opacity: 1;
+  transition: 0.2s ease;
+}
 /* 카드 뒤집기 */
 #section4,
 #section7 {
-  height: 70vw;
+  height: 74vw;
   max-height: 1100px;
   display: flex;
   flex-wrap: wrap;
@@ -72,6 +86,9 @@
   padding-inline: 4vw;
   overflow: hidden;
   align-items: center;
+}
+#section7 {
+  height: 84vw;
 }
 .card-container {
   width: 25%;
@@ -106,13 +123,13 @@
   animation: rotateCard2 8s ease infinite forwards;
 }
 @keyframes rotateCard1 {
-  25% {
+  50% {
     transform: rotateY(0deg);
   }
-  50% {
+  66% {
     transform: rotateY(180deg);
   }
-  75% {
+  83% {
     transform: rotateY(180deg);
   }
   100% {
@@ -120,13 +137,13 @@
   }
 }
 @keyframes rotateCard2 {
-  25% {
+  17% {
     transform: rotateY(180deg);
   }
-  50% {
+  33% {
     transform: rotateY(360deg);
   }
-  75% {
+  83% {
     transform: rotateY(360deg);
   }
   100% {
@@ -171,13 +188,13 @@
   animation: rotateAnimation2 8s ease infinite forwards;
 }
 @keyframes rotateAnimation1 {
-  25% {
+  50% {
     transform: translateZ(-273px) rotateY(-180deg);
   }
-  50% {
+  66% {
     transform: translateZ(-273px) rotateY(0deg);
   }
-  75% {
+  83% {
     transform: translateZ(-273px) rotateY(0deg);
   }
   100% {
@@ -185,13 +202,13 @@
   }
 }
 @keyframes rotateAnimation2 {
-  25% {
+  17% {
     transform: translateZ(-273px) rotateY(0deg);
   }
-  50% {
+  33% {
     transform: translateZ(-273px) rotateY(180deg);
   }
-  75% {
+  83% {
     transform: translateZ(-273px) rotateY(180deg);
   }
   100% {
@@ -216,12 +233,31 @@
 }
 
 #section6 {
-  display:flex;
+  display: flex;
+  flex-direction: row;
+  gap: 4vw;
+  padding: 5vw 6vw;
 }
 .split-wrapper {
   display: flex;
+  gap: 4vw;
+}
+.img-container {
+  flex: 1 0 0;
 }
 /*효과 전용 class*/
 .invisible {
   opacity: 0;
+}
+
+@media screen and (max-width: 600px) {
+  #section6 {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20vw;
+  }
+  .split-wrapper {
+    display: flex;
+    gap: 6vw;
+  }
 }

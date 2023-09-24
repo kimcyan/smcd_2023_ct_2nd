@@ -1,4 +1,4 @@
-/* section 1 요소 생성 - 개수 고민 중 */
+/* section 1 요소 생성 */
 const magnetSp = document.querySelectorAll('.m-sp');
 
 function multiplyNode(node, count) {
@@ -126,5 +126,6 @@ const observer = new ResizeObserver((entries) => {
 
 observer.observe(section7);
 
-$(document).ready(scaleSide);
-
+document.addEventListener('DOMContentLoaded', function () {
+  scaleSide();
+});
