@@ -93,6 +93,8 @@
 .card-container {
   width: 25%;
   perspective: 1000px;
+  display: flex;
+  justify-content: center;
 }
 .spinImg,
 .flipImg {
