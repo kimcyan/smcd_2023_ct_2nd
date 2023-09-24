@@ -96,6 +96,7 @@ function scaleSide() {
   const back = document.querySelectorAll('.cardbox-back');
   const backWidth = back[0].offsetWidth;
   const backHeight = back[0].offsetHeight;
+  console.log(`backheight: ${backHeight}`);
   for (let i = 0; side[i]; i += 2) {
     side[i].style.height = `${backHeight + 1}px`;
     side[i + 1].style.height = `${backHeight + 1}px`;
@@ -126,6 +127,10 @@ const observer = new ResizeObserver((entries) => {
 
 observer.observe(section7);
 
-document.addEventListener('DOMContentLoaded', function () {
-  scaleSide();
-});
+document.addEventListener(
+  'DOMContentLoaded',
+  setTimeout(function () {
+    scaleSide();
+  }, 100),
+  false
+);

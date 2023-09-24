@@ -115,12 +115,12 @@
 }
 #section4 .c1 .flip-wrap,
 #section4 .c3 .flip-wrap {
-  animation: rotateCard1 8s ease infinite forwards;
+  animation: rotateCard1 10s ease infinite forwards;
 }
 #section4 .c2 .flip-wrap,
 #section4 .c4 .flip-wrap {
   transform: rotateY(180deg);
-  animation: rotateCard2 8s ease infinite forwards;
+  animation: rotateCard2 10s ease infinite forwards;
 }
 @keyframes rotateCard1 {
   50% {
@@ -181,11 +181,11 @@
 .c1 .cardbox-wrap,
 .c3 .cardbox-wrap {
   transform: translateZ(-273px) rotateY(-180deg);
-  animation: rotateAnimation1 8s ease infinite forwards;
+  animation: rotateAnimation1 10s ease infinite forwards;
 }
 .c2 .cardbox-wrap,
 .c4 .cardbox-wrap {
-  animation: rotateAnimation2 8s ease infinite forwards;
+  animation: rotateAnimation2 10s ease infinite forwards;
 }
 @keyframes rotateAnimation1 {
   50% {
@@ -248,16 +248,4 @@
 /*효과 전용 class*/
 .invisible {
   opacity: 0;
-}
-
-@media screen and (max-width: 600px) {
-  #section6 {
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20vw;
-  }
-  .split-wrapper {
-    display: flex;
-    gap: 6vw;
-  }
 }
