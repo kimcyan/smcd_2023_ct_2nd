@@ -1,0 +1,40 @@
+.hoverarea {
+  padding: 1%;
+  border-block: 1px solid #1b1b1b;
+  aspect-ratio: 1440/ 87;
+}
+.hoverarea svg {
+  max-width: 60%;
+  height: auto;
+}
+.hoverarea:hover {
+  background-color: #1b1b1b;
+  & svg path {
+    fill: #fcfcfc;
+  }
+}
+.linkarea {
+  position: relative;
+}
+.golink {
+  position: absolute;
+  max-width: 11%;
+}
+.golink-1 {
+  top: 51.5%;
+  left: 28%;
+}
+.golink-2 {
+  position: absolute;
+  top: 62.9%;
+  left: 31%;
+  max-width: 11%;
+}
+.golink svg {
+  height: auto;
+}
+.golink:hover {
+  & svg path {
+    stroke: #1dc1dd;
+  }
+}
