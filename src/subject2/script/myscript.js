@@ -130,6 +130,6 @@ document.addEventListener(
   'DOMContentLoaded',
   setTimeout(function () {
     scaleSide();
-  }, 100),
+  }, 500),
   false
 );
