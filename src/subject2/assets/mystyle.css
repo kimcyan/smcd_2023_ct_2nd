@@ -217,12 +217,6 @@
     transform: translateZ(-273px) rotateY(360deg);
   }
 }
-/*애니메이션 딜레이
-.c2 .cardbox-wrap,
-.c2 .flip-wrap,
-.c2 .cardbox {
-  animation-delay: 0.2s;
-}*/
 .c3 .cardbox-wrap,
 .c3 .flip-wrap,
 .c3 .cardbox {

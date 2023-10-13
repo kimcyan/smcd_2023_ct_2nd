@@ -96,26 +96,23 @@ function scaleSide() {
   const back = document.querySelectorAll('.cardbox-back');
   const backWidth = back[0].offsetWidth;
   const backHeight = back[0].offsetHeight;
-  for (let i = 0; side[i]; i += 2) {
-    side[i].style.height = `${backHeight + 1}px`;
-    side[i + 1].style.height = `${backHeight + 1}px`;
-    side[i].style.transform = `translateZ(${
-      side[0].offsetWidth / 2
-    }px) translateX(${backWidth / 2}px) rotateY(90deg)`;
-    side[i + 1].style.transform = `translateZ(${
-      side[0].offsetWidth / 2
-    }px) translateX(${(backWidth / 2) * -1}px) rotateY(90deg)`;
+  if (backWidth == 0) {
+    setTimeout(scaleSide, 300);
+  } else {
+    for (let i = 0; side[i]; i += 2) {
+      side[i].style.height = `${backHeight + 1}px`;
+      side[i + 1].style.height = `${backHeight + 1}px`;
+      side[i].style.transform = `translateZ(${
+        side[0].offsetWidth / 2
+      }px) translateX(${backWidth / 2}px) rotateY(90deg)`;
+      side[i + 1].style.transform = `translateZ(${
+        side[0].offsetWidth / 2
+      }px) translateX(${(backWidth / 2) * -1}px) rotateY(90deg)`;
+    }
+    back.forEach((element) => {
+      element.style.transform = `translateZ(${side[0].offsetWidth}px) rotateY(0deg)`;
+    });
   }
-  /*
-  side.forEach((element) => {
-    element.style.height = `${backHeight + 1}px`;
-    element.style.transform = `translateZ(${
-      side[0].offsetWidth / 2
-    }px) translateX(${backWidth / 2}px) rotateY(90deg)`;
-  });*/
-  back.forEach((element) => {
-    element.style.transform = `translateZ(${side[0].offsetWidth}px) rotateY(0deg)`;
-  });
 }
 
 const observer = new ResizeObserver((entries) => {
@@ -125,11 +122,3 @@ const observer = new ResizeObserver((entries) => {
 });
 
 observer.observe(section7);
-
-document.addEventListener(
-  'DOMContentLoaded',
-  setTimeout(function () {
-    scaleSide();
-  }, 500),
-  false
-);
