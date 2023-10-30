@@ -228,11 +228,6 @@
   animation-delay: 0.4s !important;
 }
 
-.empty-box {
-  aspect-ratio: 1440 / 200;
-  width: 100%;
-  background-color: #35353d;
-}
 /*효과 전용 class*/
 .invisible {
   opacity: 0;
